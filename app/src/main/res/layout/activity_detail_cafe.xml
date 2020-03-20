@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.DetailCafeActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayoutDetailCafe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbarDetailCafe"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:title="Detail"
+                app:navigationIcon="@drawable/ic_back_black"/>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewImageDetailCafe"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="2dp"
+            app:layout_constraintTop_toBottomOf="@id/appBarLayoutDetailCafe"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="0dp">
+
+            <ImageView
+                android:id="@+id/imageViewDetailCafe"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_140sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@tools:sample/backgrounds/scenic"
+                android:scaleType="centerCrop"
+                tools:ignore="ContentDescription" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/textViewDetailCafeName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            app:layout_constraintTop_toBottomOf="@id/cardViewImageDetailCafe"
+            app:layout_constraintStart_toStartOf="@id/cardViewImageDetailCafe"
+            app:layout_constraintEnd_toEndOf="@id/cardViewImageDetailCafe"
+            tools:text="Cafe Milk"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:fontFamily="@font/roboto_bold"/>
+
+        <ImageView
+            android:id="@+id/imageViewDetailCafeOpen"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="22dp"
+            android:src="@drawable/ic_info_tanggal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewDetailCafeName"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/textViewLabelDetailCafeOpen"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="14dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/text_open"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageViewDetailCafeOpen"
+            app:layout_constraintTop_toTopOf="@+id/imageViewDetailCafeOpen" />
+
+        <TextView
+            android:id="@+id/textViewDetailCafeOpen"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="14dp"
+            android:fontFamily="@font/roboto_regular"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageViewDetailCafeOpen"
+            app:layout_constraintTop_toBottomOf="@+id/textViewLabelDetailCafeOpen"
+            tools:text="08:00 - 16:00" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="imageViewDetailCafeOpen,textViewLabelDetailCafeOpen,textViewDetailCafeOpen"
+            tools:layout_editor_absoluteY="731dp" />
+
+        <ImageView
+            android:id="@+id/imageViewDetailCafeAddress"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="14dp"
+            android:src="@drawable/ic_info_lokasi"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/barrier"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/textViewLabelDetailCafeAddress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="14dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/text_address"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageViewDetailCafeAddress"
+            app:layout_constraintTop_toTopOf="@+id/imageViewDetailCafeAddress" />
+
+        <TextView
+            android:id="@+id/textViewDetailCafeAddress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="14dp"
+            android:layout_marginBottom="14dp"
+            android:fontFamily="@font/roboto_regular"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageViewDetailCafeAddress"
+            app:layout_constraintTop_toBottomOf="@+id/textViewLabelDetailCafeAddress"
+            tools:text="Jl. Ring Road Utara, Condong Catur, Sleman, YogyakartaM" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="imageViewDetailCafeAddress,textViewLabelDetailCafeAddress,textViewDetailCafeAddress"
+            tools:layout_editor_absoluteY="731dp" />
+
+        <ImageView
+            android:id="@+id/imageViewDetailCafeLocation"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="14dp"
+            android:layout_marginBottom="14dp"
+            android:src="@drawable/ic_map"
+            android:scaleType="fitXY"
+            android:background="#9EBEAA"
+            app:layout_constraintTop_toBottomOf="@id/barrier2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/imageViewDetailCafeAddress"
+            tools:ignore="ContentDescription" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="imageViewDetailCafeLocation"
+            tools:layout_editor_absoluteY="731dp" />
+
+        <ImageView
+            android:id="@+id/imageViewDetailCafeDescription"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="14dp"
+            android:src="@drawable/ic_info_detail"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/barrier3"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/textViewLabelDetailCafeDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="14dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/text_description"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageViewDetailCafeDescription"
+            app:layout_constraintTop_toTopOf="@+id/imageViewDetailCafeDescription" />
+
+        <TextView
+            android:id="@+id/textViewDetailCafeDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="14dp"
+            android:paddingBottom="20dp"
+            android:fontFamily="@font/roboto_regular"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@+id/textViewLabelDetailCafeDescription"
+            app:layout_constraintStart_toEndOf="@+id/imageViewDetailCafeDescription"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="This Cafe very a nice place to visit, because have a good view" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
